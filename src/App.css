@@ -1,0 +1,123 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4a6cf7;
+  --primary-dark: #3252d2;
+  --secondary-color: #ff6b6b;
+  --text-color: #333;
+  --text-light: #666;
+  --bg-color: #fff;
+  --bg-light: #dee6ee;
+  --bg-dark: #202b3c;
+  --card-bg: #fff;
+  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-light);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.section {
+  padding: 100px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.secondary {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.secondary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.image-placeholder {
+  background-color: #ddd;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
