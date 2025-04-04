@@ -1,11 +1,11 @@
 import { useRef } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
+// import About from './components/About';
+// import Projects from './components/Projects';
+// import Skills from './components/Skills';
+// import Experience from './components/Experience';
+// import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -40,7 +40,7 @@ function App() {
           <Home />
         </section>
         
-        <section ref={aboutRef} className="section" id="about">
+{/*         <section ref={aboutRef} className="section" id="about">
           <About />
         </section>
         
@@ -58,7 +58,7 @@ function App() {
         
         <section ref={contactRef} className="section" id="contact">
           <Contact />
-        </section>
+        </section> */}
       </div>
       
       <Footer />
