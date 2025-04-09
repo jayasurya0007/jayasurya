@@ -14,6 +14,8 @@ const Navbar = ({
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [showName, setShowName] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -24,11 +26,11 @@ const Navbar = ({
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Mobile hide/show logic
       if (window.innerWidth <= 768) {
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
           document.querySelector('.navbar').style.transform = 'translateY(-100%)';
@@ -37,7 +39,6 @@ const Navbar = ({
         }
       }
 
-      // Section detection logic
       const sections = [
         { id: 'home', ref: homeRef },
         { id: 'about', ref: aboutRef },
@@ -71,12 +72,17 @@ const Navbar = ({
     setIsMenuOpen(false);
   };
 
-  
+  const toggleName = () => {
+    setShowName(!showName);
+  };
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-logo">
-        <h1>Portfolio</h1>
+      <div className="navbar-logo" onClick={toggleName}>
+        <div className={`logo-container ${showName ? 'rotated' : ''}`}>
+          <h1 className="logo-text">PORTFOLIO</h1>
+          <h1 className="logo-text">JAYASURYA</h1>
+        </div>
       </div>
 
       <button 
