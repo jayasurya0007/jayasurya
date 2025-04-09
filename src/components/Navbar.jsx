@@ -71,6 +71,8 @@ const Navbar = ({
     setIsMenuOpen(false);
   };
 
+  
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-logo">
