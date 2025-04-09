@@ -8,11 +8,11 @@ const Home = () => {
         <h2>Frontend Developer & UI/UX Designer</h2>
         <p>I build beautiful, responsive web applications with modern technologies</p>
         <div className="home-buttons">
-          <button className="btn primary">View My Work</button>
-          <button className="btn secondary">Download CV</button>
+          <button className="btn primary">Download CV</button>
         </div>
       </div>
     </div>
+    
   );
 };
 

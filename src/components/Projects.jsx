@@ -7,14 +7,12 @@ const Projects = () => {
       title: "E-commerce Website",
       description: "A fully responsive e-commerce platform built with React and Node.js with payment integration.",
       tags: ["React", "Node.js", "Express", "MongoDB"],
-      image: "project1.jpg"
     },
     {
       id: 2,
       title: "Task Management App",
       description: "A productivity application that helps users organize and prioritize their daily tasks.",
       tags: ["React", "Redux", "Firebase"],
-      image: "project2.jpg"
     }
   ];
 
@@ -24,9 +22,6 @@ const Projects = () => {
       <div className="projects-grid">
         {projectList.map((project) => (
           <div className="project-card" key={project.id}>
-            <div className="project-image">
-              <div className="image-placeholder"></div>
-            </div>
             <div className="project-content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>

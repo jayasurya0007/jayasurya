@@ -1,123 +1,64 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Audiowide&display=swap');
 
+/* ========== CORE VARIABLES ========== */
+:root {
+  /* Cosmic Color Scheme */
+  --cosmic-dark: #121523;        /* Deep space black */
+  --cosmic-deep: #0a0f2e;        /* Nebula purple */
+  --starlight: #00f3ff;          /* Cyan starlight */
+  --galaxy-purple: #a855f7;      /* Purple nebula */
+  --space-gray: #e0f7fa;         /* Off-white text */
+  
+  /* Effects */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --glow: 0 0 25px rgba(0, 243, 255, 0.3);
+}
+
+/* ========== GLOBAL RESETS ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --primary-color: #4a6cf7;
-  --primary-dark: #3252d2;
-  --secondary-color: #ff6b6b;
-  --text-color: #333;
-  --text-light: #666;
-  --bg-color: #fff;
-  --bg-light: #dee6ee;
-  --bg-dark: #202b3c;
-  --card-bg: #fff;
-  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-}
-
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Audiowide', cursive;
+  background: var(--cosmic-dark);
+  color: var(--space-gray);
   line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--bg-light);
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content {
-  flex: 1;
-}
-
-.section {
-  padding: 100px 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* ========== SHARED PATTERNS ========== */
+.star-field::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="1" fill="%2300f3ff" opacity="0.5"/></svg>');
+  animation: stars 60s linear infinite;
+  z-index: 0;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  color: var(--text-color);
-  margin-bottom: 50px;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--starlight);
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
   position: relative;
+  text-shadow: var(--glow);
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: var(--primary-color);
-  border-radius: 2px;
+/* ========== GLOBAL ANIMATIONS ========== */
+@keyframes stars {
+  from { background-position: 0 0 }
+  to { background-position: 100% 100% }
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: var(--transition);
-  cursor: pointer;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-}
-
-.primary {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-.primary:hover {
-  background-color: var(--primary-dark);
-}
-
-.secondary {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-.secondary:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-.highlight {
-  color: var(--primary-color);
-}
-
-.image-placeholder {
-  background-color: #ddd;
-  border-radius: 8px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 80px 0;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
+@keyframes float {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-20px) }
 }

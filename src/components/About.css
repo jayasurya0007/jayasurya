@@ -1,60 +1,94 @@
-
 .about-container {
-  padding: 0 5%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 60px 5%;
+  background-color: var(--cosmic-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="1" fill="%2300f3ff" opacity="0.5"/></svg>');
+  animation: stars 60s linear infinite;
+  z-index: 0;
 }
 
 .about-content {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  align-items: start;
 }
 
 .about-image {
-  flex: 1;
-  max-width: 400px;
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--starlight);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+  transition: var(--transition);
+  position: relative;
+  top: -20px;
+}
+
+.profile-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(0, 243, 255, 0.3);
 }
 
 .about-text {
-  flex: 1.5;
+  color: var(--space-gray);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 20px;
 }
 
 .about-text p {
-  margin-bottom: 20px;
-  color: var(--text-light);
-  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 20px;
 }
 
-.personal-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.info-item {
-  padding: 10px 0;
-}
-
-.info-item strong {
-  color: var(--text-color);
-  margin-right: 5px;
+.about-text p::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--starlight);
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
+  .about-container {
+    padding: 50px 5%;
+  }
+  
   .about-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .about-image {
-    max-width: 100%;
-    height: 300px;
-  }
-  
-  .personal-info {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    margin-top: -20px;
+    top: 0;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    margin-top: 0;
   }
 }
