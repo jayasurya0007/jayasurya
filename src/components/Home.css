@@ -70,7 +70,7 @@
   color: var(--space-text);
   margin-bottom: 3rem;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 800px;
   animation: fadeInUp 1s ease-out 0.4s forwards;
   opacity: 0;
 }
@@ -131,6 +131,10 @@
   left: 100%;
 }
 
+.home-buttons a{
+  text-decoration: none;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -156,7 +160,7 @@
   }
   
   .btn {
-    width: 100%;
+    width: 85%;
     padding: 15px 30px;
   }
 }

@@ -43,15 +43,16 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
 }
 
 .skill-card {
-  padding: 15px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 10px;
   background: rgba(0, 243, 255, 0.08);
   transition: var(--transition);
+  text-align: center;
 }
 
 .skill-card:hover {
@@ -59,64 +60,91 @@
   box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
 }
 
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--starlight-primary);
+  transition: var(--transition);
 }
 
-.skill-info h4 {
+.skill-card:hover .skill-icon {
+  color: var(--galaxy-accent);
+  transform: scale(1.2);
+}
+
+.skill-name {
   color: var(--space-text);
   font-family: 'Audiowide', cursive;
-  font-size: 1rem;
-}
-
-.skill-percentage {
-  color: var(--starlight-primary);
-  font-family: 'Orbitron', sans-serif;
   font-size: 0.9rem;
+  margin: 0;
 }
 
-.skill-bar {
-  height: 8px;
-  background: rgba(0, 243, 255, 0.1);
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
+/* Add this to your existing CSS */
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--starlight-primary);
+  transition: var(--transition);
 }
 
-.skill-progress {
-  height: 100%;
-  background: linear-gradient(90deg, var(--starlight-primary), var(--galaxy-accent));
-  border-radius: 4px;
-  position: relative;
-  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+.skill-icon svg {
+  width: 1em;
+  height: 1em;
 }
 
-.skill-progress::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  animation: progressGlow 2s infinite;
-}
-
-@keyframes progressGlow {
-  0% { opacity: 0; left: -100%; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0; left: 100%; }
+.skill-card:hover .skill-icon {
+  color: var(--galaxy-accent);
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
   }
   
-  .skill-category {
-    padding: 20px;
+  .skill-card {
+    padding: 15px;
   }
+  
+  .skill-icon {
+    font-size: 2rem;
+  }
+  
+  .skill-name {
+    font-size: 0.8rem;
+  }
+}
+
+/* Add these styles */
+.custom-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(33%) saturate(629%) 
+          hue-rotate(166deg) brightness(101%) contrast(89%);
+}
+
+.skill-card:hover .custom-icon {
+  filter: brightness(0) saturate(100%) invert(52%) sepia(99%) saturate(367%) 
+          hue-rotate(173deg) brightness(101%) contrast(89%);
+}
+
+img[data-fallback] {
+  position: relative;
+}
+
+img[data-fallback]::after {
+  content: attr(alt);
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: var(--starlight-primary);
+  font-family: 'Audiowide', cursive;
+  font-size: 0.8rem;
+}
+@keyframes progressGlow {
+  0% { opacity: 0; left: -100%; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; left: 100%; }
 }

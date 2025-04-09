@@ -4,15 +4,19 @@ const Projects = () => {
   const projectList = [
     {
       id: 1,
-      title: "E-commerce Website",
-      description: "A fully responsive e-commerce platform built with React and Node.js with payment integration.",
-      tags: ["React", "Node.js", "Express", "MongoDB"],
+      title: "StreamSyncJJ – Synchronized Live Streaming Platform",
+      description: "A fully synchronized, encrypted live-streaming platform built for webinars, events, and broadcasts. Features real-time chat, seamless playback sync across viewers, and secure video delivery with AWS.",
+      tags: ["React", "Node.js", "Express", "MongoDB","WebSockets","FFmpeg","HLS","AWS S3 + CloudFront"],
+      link:"https://devfolio.co/projects/streamsyncjj-530c",
+      github:"https://github.com/jayasurya0007/streamsync",
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A productivity application that helps users organize and prioritize their daily tasks.",
-      tags: ["React", "Redux", "Firebase"],
+      title: "RESQ – Emergency Coordination Platform 🚨",
+      description: "A real-time disaster response app built with React Native Expo. Connects citizens, NGOs, and government agencies with AI-driven disaster prediction, geolocation-based SOS alerts, and coordinated rescue dashboards.",
+      tags: ["React Native (Expo)", "Node.js","Express","MongoDB","WebSocket"],
+      link:"https://expo.dev/accounts/jayasurya.26it/projects/RescueApp/builds/e9e3dfc7-9e97-491b-aff0-0ae387ad5f92",
+      github:"https://github.com/jayasurya0007/ResQ-Mobile",
     }
   ];
 
@@ -31,8 +35,8 @@ const Projects = () => {
                 ))}
               </div>
               <div className="project-links">
-                <a href="#" className="project-link">View Project</a>
-                <a href="#" className="project-link">Source Code</a>
+                <a href={project.link} className="project-link">View Project</a>
+                <a href={project.github} className="project-link">Source Code</a>
               </div>
             </div>
           </div>

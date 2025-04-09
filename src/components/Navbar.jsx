@@ -12,14 +12,32 @@ const Navbar = ({
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
       
-      // Determine which section is in view
-      const scrollPosition = window.scrollY;
-      
+      // Mobile hide/show logic
+      if (window.innerWidth <= 768) {
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          document.querySelector('.navbar').style.transform = 'translateY(-100%)';
+        } else {
+          document.querySelector('.navbar').style.transform = 'translateY(0)';
+        }
+      }
+
+      // Section detection logic
       const sections = [
         { id: 'home', ref: homeRef },
         { id: 'about', ref: aboutRef },
@@ -28,66 +46,64 @@ const Navbar = ({
         { id: 'experience', ref: experienceRef },
         { id: 'contact', ref: contactRef },
       ];
-      
+
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section.ref.current) {
           const offsetTop = section.ref.current.offsetTop;
-          if (scrollPosition >= offsetTop - 100) {
+          if (currentScrollY >= offsetTop - 100) {
             setActiveSection(section.id);
             break;
           }
         }
       }
+
+      setIsScrolled(currentScrollY > 50);
+      setLastScrollY(currentScrollY);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [homeRef, aboutRef, projectsRef, skillsRef, experienceRef, contactRef]);
+  }, [lastScrollY, homeRef, aboutRef, projectsRef, skillsRef, experienceRef, contactRef]);
+
+  const handleNavClick = (ref) => {
+    scrollToSection(ref);
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-logo">
         <h1>Portfolio</h1>
       </div>
-      
-      <ul className="navbar-links">
-        <li className={activeSection === 'home' ? 'active' : ''}>
-          <a href="#home" onClick={(e) => {
-            e.preventDefault();
-            scrollToSection(homeRef);
-          }}>Home</a>
-        </li>
-        <li className={activeSection === 'about' ? 'active' : ''}>
-          <a href="#about" onClick={(e) => {
-            e.preventDefault();
-            scrollToSection(aboutRef);
-          }}>About</a>
-        </li>
-        <li className={activeSection === 'projects' ? 'active' : ''}>
-          <a href="#projects" onClick={(e) => {
-            e.preventDefault();
-            scrollToSection(projectsRef);
-          }}>Projects</a>
-        </li>
-        <li className={activeSection === 'skills' ? 'active' : ''}>
-          <a href="#skills" onClick={(e) => {
-            e.preventDefault();
-            scrollToSection(skillsRef);
-          }}>Skills</a>
-        </li>
-        <li className={activeSection === 'experience' ? 'active' : ''}>
-          <a href="#experience" onClick={(e) => {
-            e.preventDefault();
-            scrollToSection(experienceRef);
-          }}>Experience</a>
-        </li>
-        <li className={activeSection === 'contact' ? 'active' : ''}>
-          <a href="#contact" onClick={(e) => {
-            e.preventDefault();
-            scrollToSection(contactRef);
-          }}>Contact</a>
-        </li>
+
+      <button 
+        className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Navigation menu"
+      >
+        <span className="menu-line"></span>
+        <span className="menu-line"></span>
+        <span className="menu-line"></span>
+      </button>
+
+      <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
+        {['home', 'about', 'projects', 'skills', 'experience', 'contact'].map((section) => (
+          <li 
+            key={section}
+            className={activeSection === section ? 'active' : ''}
+          >
+            <a
+              href={`#${section}`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(eval(`${section}Ref`));
+              }}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

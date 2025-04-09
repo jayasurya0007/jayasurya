@@ -1,8 +1,12 @@
 // components/Contact.jsx
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './Contact.css';
-import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+
+// Import your social media icons (make sure to add these images to your project)
+import githubIcon from '../assets/github-icon.png';
+import linkedinIcon from '../assets/linkedin-icon.png';
+import twitterIcon from '../assets/twitter-icon.png';
 
 emailjs.init(import.meta.env.VITE_EMAIL_PUBLIC_KEY);
 
@@ -42,11 +46,6 @@ const Contact = () => {
       }, (error) => {
         console.log('Failed to send message:', error.text);
       });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
   };
 
   return (
@@ -56,19 +55,13 @@ const Contact = () => {
       <div className="contact-content">
         <div className="contact-info">
           <div className="contact-item">
-            <div className="contact-icon">
-              <i className="fas fa-map-marker-alt"></i>
-            </div>
             <div className="contact-details">
               <h3>Location</h3>
-              <p>Chennai,Tamilnadu</p>
+              <p>Chennai, Tamilnadu</p>
             </div>
           </div>
           
           <div className="contact-item">
-            <div className="contact-icon">
-              <i className="fas fa-envelope"></i>
-            </div>
             <div className="contact-details">
               <h3>Email</h3>
               <p>jayasuryar849@gmail.com</p>
@@ -76,9 +69,6 @@ const Contact = () => {
           </div>
           
           <div className="contact-item">
-            <div className="contact-icon">
-              <i className="fas fa-phone"></i>
-            </div>
             <div className="contact-details">
               <h3>Phone</h3>
               <p>+91 93617 57397</p>
@@ -88,14 +78,14 @@ const Contact = () => {
           <div className="social-links">
             <h3>Follow Me</h3>
             <div className="social-icons">
-              <a href="#" className="social-icon">
-                <i className="fab fa-github"></i>
+              <a href="https://github.com/jayasurya0007" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <img src={githubIcon} alt="GitHub" className="social-icon-img" />
               </a>
-              <a href="#" className="social-icon">
-                <i className="fab fa-linkedin"></i>
+              <a href="https://linkedin.com/in/jayasurya-rajaraman-2674a9253/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <img src={linkedinIcon} alt="LinkedIn" className="social-icon-img" />
               </a>
-              <a href="#" className="social-icon">
-                <i className="fab fa-twitter"></i>
+              <a href="https://x.com/jayasurya_0007" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <img src={twitterIcon} alt="Twitter" className="social-icon-img" />
               </a>
             </div>
           </div>

@@ -4,28 +4,13 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      role: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
-      duration: "Jan 2022 - Present",
-      description: "Leading frontend development for web applications, implementing new features, and optimizing performance. Collaborating with designers and backend developers to deliver high-quality user experiences.",
+      role: "AI/ML Intern",
+      company: "Innovate Intern ",
+      duration: "March 2024 – May 2024",
+      description: "Worked on machine learning and computer vision projects, gaining hands-on experience in intelligent system development and deployment.",
       responsibilities: [
-        "Developed and maintained multiple React-based applications",
-        "Led a team of 3 junior developers and provided mentorship",
-        "Improved website performance by 40% through code optimization",
-        "Implemented responsive design principles across all projects"
-      ]
-    },
-    {
-      id: 2,
-      role: "Frontend Developer",
-      company: "Digital Creations",
-      duration: "Mar 2019 - Dec 2021",
-      description: "Worked on various client projects, building responsive websites and web applications using modern JavaScript frameworks and libraries.",
-      responsibilities: [
-        "Built and maintained client websites using React and Vue.js",
-        "Collaborated with UI/UX designers to implement designs",
-        "Integrated RESTful APIs and third-party services",
-        "Participated in code reviews and contributed to coding standards"
+        "Developed a human motion detection system using OpenCV and Python",
+        "Applied computer vision techniques to analyze real-time video streams" 
       ]
     }
   ];

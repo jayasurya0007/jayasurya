@@ -35,8 +35,6 @@
 }
 
 .contact-item {
-  display: flex;
-  align-items: center;
   margin-bottom: 30px;
   padding: 15px;
   border-radius: 8px;
@@ -46,22 +44,6 @@
 .contact-item:hover {
   background: rgba(0, 243, 255, 0.08);
   transform: translateY(-3px);
-}
-
-.contact-icon {
-  width: 50px;
-  height: 50px;
-  background: rgba(0, 243, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-}
-
-.contact-icon i {
-  color: var(--starlight);
-  font-size: 1.2rem;
 }
 
 .contact-details h3 {
@@ -97,15 +79,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--space-gray);
   transition: var(--transition);
 }
 
 .social-icon:hover {
-  color: var(--starlight);
   border-color: var(--starlight);
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+.social-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .contact-form-container {
@@ -115,6 +101,7 @@
   border: 1px solid rgba(0, 243, 255, 0.1);
   backdrop-filter: blur(10px);
 }
+
 
 .form-success-message {
   color: #00ff88;

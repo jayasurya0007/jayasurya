@@ -8,7 +8,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
-
+import './lib/fontawesome'; 
 function App() {
   // Create refs for each section
   const homeRef = useRef(null);

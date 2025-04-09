@@ -1,4 +1,7 @@
 import './Footer.css';
+// Import only the icons you need for the footer
+import discordIcon from '../assets/discord-icon.png';
+import redditIcon from '../assets/reddit-icon.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,8 +10,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <h2>Your Name</h2>
-          <p>Frontend Developer & UI/UX Designer</p>
+          <h2>Jayasurya R</h2>
+          <p>Full Stack Developer</p>
         </div>
         
         <div className="footer-links">
@@ -27,17 +30,11 @@ const Footer = () => {
           <div className="footer-social">
             <h3>Connect With Me</h3>
             <div className="social-icons">
-              <a href="#" className="social-icon">
-                <i className="fab fa-github"></i>
+              <a href="https://discord.com/users/Jayasurya849" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <img src={discordIcon} alt="Discord" className="social-icon-img" />
               </a>
-              <a href="#" className="social-icon">
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="#" className="social-icon">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="social-icon">
-                <i className="fab fa-instagram"></i>
+              <a href="https://www.reddit.com/user/block-chain-07" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <img src={redditIcon} alt="Reddit" className="social-icon-img" />
               </a>
             </div>
           </div>
@@ -45,7 +42,7 @@ const Footer = () => {
       </div>
       
       <div className="copyright">
-        <p>&copy; {currentYear} Your Name. All Rights Reserved.</p>
+        <p>&copy; {currentYear} Jayasurya. All Rights Reserved.</p>
       </div>
     </footer>
   );
