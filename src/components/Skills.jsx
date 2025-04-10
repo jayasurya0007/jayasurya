@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Skills.css';
-
+import { solidityIcon } from '../assets'; 
 // Font Awesome Icons
 import { 
   faReact,
@@ -44,8 +44,8 @@ const Skills = () => {
     {
       category: "Blockchain",
       skills: [
-        { name: "Solidity", icon: 'solidity' },
-        { name: "Ethers.js", icon: 'ethers' }
+        { name: "Solidity", icon: solidityIcon },
+        { name: "Ethers.js", icon: "https://files.svgcdn.io/logos/ethers.svg" }
       ]
     },
     {
@@ -73,7 +73,7 @@ const Skills = () => {
                   <div className="skill-icon">
                     {typeof skill.icon === 'string' ? (
                       <img 
-                        src={`/assets/icons/${skill.icon}.svg`} 
+                        src={skill.icon} 
                         alt={skill.name}
                         className="custom-icon"
                         onError={(e) => {
@@ -90,6 +90,7 @@ const Skills = () => {
                     ) : (
                       <FontAwesomeIcon icon={skill.icon} />
                     )}
+                    <span className="fallback-text">{skill.name}</span>
                   </div>
                   <h4 className="skill-name">{skill.name}</h4>
                 </div>
