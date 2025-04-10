@@ -80,8 +80,8 @@ const Navbar = ({
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-logo" onClick={toggleName}>
         <div className={`logo-container ${showName ? 'rotated' : ''}`}>
-          <h1 className="logo-text">PORTFOLIO</h1>
-          <h1 className="logo-text">JAYASURYA</h1>
+          <h1 className="logo-text">~/portfolio</h1>
+          <h1 className="logo-text">~/root</h1>
         </div>
       </div>
 

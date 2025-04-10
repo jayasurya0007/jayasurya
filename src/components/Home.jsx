@@ -5,8 +5,9 @@ const Home = () => {
     <div className="home-container">
       <div className="home-content">
         <h1>Hello, I'm <span className="highlight">JAYASURYA</span></h1>
-        <h2>Full Stack Developer </h2>
-        <p>I build responsive web applications focused on seamless functionality and modern design</p>
+        <h2>Full Stack Crafter | Code alchemist </h2>
+        <p>Turning coffee into scalable web apps with pixel-perfect UI and rock-solid backend logic.
+        I design experiences, not just websites.</p>
         <div className="home-buttons">
           <a 
             href="https://drive.google.com/uc?export=download&id=1b3FbXPbH5MDqEOWbnJDEs9W_dF8iw5J-" 
@@ -15,7 +16,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download CV
+            Grab My CV
           </a>
         </div>
       </div>

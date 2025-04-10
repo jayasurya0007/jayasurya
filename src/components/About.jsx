@@ -1,5 +1,5 @@
 import './About.css';
-import profileImg from '../assets/profile.png';
+import profileImg from '../assets/profile.jpg';
 
 
 const About = () => {
@@ -15,10 +15,11 @@ const About = () => {
           />
         </div>
         <div className="about-text">
-          <p>I'm a passionate full-stack developer with a strong focus on building functional and efficient web applications. I specialize in crafting seamless user experiences backed by powerful backend systems and smart integrations.</p>
-          <p>My journey began with HTML, CSS, and JavaScript, and has expanded to include React, Node.js, MongoDB, and modern tools. Recently, I’ve been diving deep into blockchain development, creating decentralized applications (dApps), smart contracts using Solidity, and integrating NFTs and IPFS into real-world solutions.</p>
-          <p>I’m always learning, experimenting, and pushing boundaries to stay ahead in the fast-evolving tech landscape.  </p>
-          <p>When I’m not coding, I enjoy solving cubes, playing chess, or exploring new technologies in Web3.</p>
+          <p>A full-stack developer who builds more than just websites — I engineer smooth digital journeys backed by smart, scalable systems.</p>
+          <p>I started with HTML, CSS, and JavaScript, and now wield React, Node.js, MongoDB, and modern tools to craft efficient web apps.</p>
+          <p>Lately, I’ve been diving into the blockchain world — building dApps, writing smart contracts in Solidity, and exploring NFTs and IPFS to solve real-world problems.</p>
+          <p>Whether it’s shipping pixel-perfect UIs or integrating decentralized tech, I’m always evolving — learning, building, and exploring the next big thing.</p>
+          <p>Off the screen? I’m solving Rubik’s cubes, playing chess, or geeking out over the future of Web3.</p>
         </div>
       </div>
     </div>
