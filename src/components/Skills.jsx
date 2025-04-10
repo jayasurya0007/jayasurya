@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Skills.css';
+import '../css/Skills.css';
 import { solidityIcon } from '../assets'; 
 // Font Awesome Icons
 import { 

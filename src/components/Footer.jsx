@@ -1,5 +1,4 @@
-import './Footer.css';
-// Import only the icons you need for the footer
+import '../css/Footer.css';
 import discordIcon from '../assets/discord-icon.png';
 import redditIcon from '../assets/reddit-icon.png';
 

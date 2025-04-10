@@ -1,9 +1,7 @@
 // components/Contact.jsx
 import { useState, useRef } from 'react';
-import './Contact.css';
+import '../css/Contact.css';
 import emailjs from '@emailjs/browser';
-
-// Import your social media icons (make sure to add these images to your project)
 import githubIcon from '../assets/github-icon.png';
 import linkedinIcon from '../assets/linkedin-icon.png';
 import twitterIcon from '../assets/twitter-icon.png';

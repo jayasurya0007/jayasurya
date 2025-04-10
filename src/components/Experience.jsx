@@ -1,4 +1,4 @@
-import './Experience.css';
+import '../css/Experience.css';
 
 const Experience = () => {
   const experiences = [
