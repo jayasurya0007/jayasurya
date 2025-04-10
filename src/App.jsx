@@ -62,6 +62,7 @@ function MainContent() {
             </>
           } />
           <Route path="/blog" element={<Blog />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
       
