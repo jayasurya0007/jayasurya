@@ -121,9 +121,11 @@
     .experience-timeline::before {
       left: 20px;
     }
-    
+    .experience-container{
+      padding: auto;
+    }
     .experience-card {
-      margin-left: 40px;
+      margin-left: 35px;
     }
     
     .company-info {

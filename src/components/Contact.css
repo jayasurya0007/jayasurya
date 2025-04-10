@@ -182,6 +182,9 @@
 }
 
 @media (max-width: 768px) {
+  .contact-container {
+    padding: 20px 5%;
+  }
   .contact-content {
     grid-template-columns: 1fr;
   }

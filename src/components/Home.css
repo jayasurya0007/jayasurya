@@ -148,7 +148,7 @@
 
 @media (max-width: 768px) {
   .home-container {
-    padding-top: 60px;
+    padding-top: 0px;
   }
   .home-content h1 {
     font-size: 2.5rem;
