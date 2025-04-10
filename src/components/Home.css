@@ -12,8 +12,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; /* Added for horizontal centering */
-  padding: 0 5%;
+  justify-content: center; 
+  padding-top: 100px;
   position: relative;
   overflow: hidden;
 }
@@ -147,6 +147,9 @@
 }
 
 @media (max-width: 768px) {
+  .home-container {
+    padding-top: 60px;
+  }
   .home-content h1 {
     font-size: 2.5rem;
   }
