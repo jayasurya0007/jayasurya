@@ -4,11 +4,11 @@ Welcome to my personal developer portfolio website! This project showcases my wo
 
 ## 🚀 Tech Stack
 
-- **Frontend**: React.js, HTML5, CSS3, JavaScript, Bootstrap
+- **Frontend**: React.js, HTML5, CSS3, JavaScript, TypeScript, Bootstrap
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Blockchain**: Solidity ,Ether.js 
-- **Others**: Git, GitHub, Firebase (for hosting or contact forms)
+- **Others**: Git, GitHub , Hardhat
 
 ## 📁 Features
 
