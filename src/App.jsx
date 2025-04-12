@@ -8,7 +8,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Blog from './components/additional/Blog';
+import Blog from '../blogs/Blog';
 import './App.css';
 import './lib/fontawesome';
 
