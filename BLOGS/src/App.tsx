@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
-import Dashboard from './pages/DashBoard';
+import Dashboard from './pages/Dashboard'; // ✅ Correct casing
 import BlogPost from './components/BlogPost';
 import Details from "./assets/Details.json";
 
