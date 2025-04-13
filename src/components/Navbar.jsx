@@ -96,23 +96,33 @@ const Navbar = ({
       </button>
 
       <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-        {['home', 'about', 'projects', 'skills', 'experience', 'contact'].map((section) => (
-          <li 
-            key={section}
-            className={activeSection === section ? 'active' : ''}
-          >
-            <a
-              href={`#${section}`}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(eval(`${section}Ref`));
-              }}
+          {['home', 'about', 'projects', 'skills', 'experience', 'contact'].map((section) => (
+            <li 
+              key={section}
+              className={activeSection === section ? 'active' : ''}
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              <a
+                href={`#${section}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(eval(`${section}Ref`));
+                }}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a 
+              href="https://blogs.jayasuryar.xyz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Blogs
             </a>
           </li>
-        ))}
-      </ul>
+        </ul>
+
     </nav>
   );
 };
