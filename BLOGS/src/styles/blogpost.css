@@ -1,0 +1,37 @@
+.blog-post {
+    padding-top: 6rem;
+    min-height: 100vh;
+  }
+  
+  .post-header {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  
+  .post-title {
+    font-size: 3rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .post-date {
+    color: #6b7280;
+    font-size: 1rem;
+  }
+  
+  .content-block {
+    margin: 2rem 0;
+  }
+  
+  .text-content {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.75;
+  }
+  
+  .image-caption {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }

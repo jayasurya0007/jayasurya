@@ -1,30 +1,25 @@
+import { Blog } from '../App';
 import BlogCard from '../components/BlogCard';
+import '../styles/blogcard.css';
 
-const blogs = [
-  {
-    id: '1',
-    title: 'My First Blog',
-    date: '2025-04-12',
-  },
-  {
-    id: '2',
-    title: 'Profitable Blog Tips',
-    date: '2025-04-11',
-  },
-];
+type Props = {
+  blogs: Blog[];
+};
 
-const Dashboard = () => {
-  const sortedBlogs = [...blogs].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
-
+const Dashboard = ({ blogs }: Props) => {
   return (
-    <div className="dashboard">
-      <h2>Recent Blogs</h2>
-      {sortedBlogs.map((blog) => (
-        <BlogCard key={blog.id} {...blog} />
-      ))}
-    </div>
+    <main className="dashboard" style={{ paddingTop: '8rem' }}>
+      <div className="container">
+        <h1 className="page-title">Latest Stories</h1>
+        <div className="blog-list">
+          {blogs
+            .sort((a, b) => b.date.getTime() - a.date.getTime())
+            .map((blog) => (
+              <BlogCard key={blog.id} blog={blog} />
+            ))}
+        </div>
+      </div>
+    </main>
   );
 };
 

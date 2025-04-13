@@ -1,0 +1,59 @@
+[
+  {
+    "id": "3",
+    "title": "Design Spark Challenge: A Journey Beyond Code",
+    "date": "2024-03-25",
+    "excerpt": "Reflections on a 48-hour hackathon that reshaped how I approach problems...",
+    "featuredImage": "https://source.unsplash.com/random/800x600?hackathon",
+    "content": [
+      {
+        "type": "text",
+        "content": "I'm Jayasurya, a third-year IT student at LICET, with a strong interest in tech and problem-solving. When I heard about the Design Spark Challenge hosted by Intellect Design Arena, I saw it as the perfect opportunity to challenge myself, collaborate with new minds, and learn beyond the classroom."
+      },
+      {
+        "type": "text",
+        "content": "Before the hackathon kicked off, we attended a workshop on Design Thinking—something I initially expected to be just another long lecture filled with theory. But to my surprise, it was nothing like that. They made it engaging through a gamified format that got us to think critically rather than just sit through slides. It helped me understand the value of deeply analyzing problems from the user's perspective, which would later become the foundation of our hackathon experience."
+      },
+      {
+        "type": "image",
+        "content": "https://source.unsplash.com/random/800x600?designthinking"
+      },
+      {
+        "type": "text",
+        "content": "We began our journey on March 7 at 7 AM, reaching the Intellect campus by 10 AM. After completing the registration process and randomly picking our team number—which also assigned our problem statement—we settled into our workspace. The hackathon officially began at 11 AM, and from the very start, it was clear this wasn’t going to be your usual 'build something fast' event."
+      },
+      {
+        "type": "text",
+        "content": "The first phase focused entirely on Design Thinking. For nearly 8 hours, we didn't touch a single line of code. Instead, we immersed ourselves in understanding the actual problem. Through persona creation, journey mapping, and identifying explicit and hidden user needs, we were guided to think from a user-centric perspective. Conversations with the stakeholders gave us valuable context that textbooks could never offer."
+      },
+      {
+        "type": "text",
+        "content": "Our theme was Disaster Management, and initially, it was tough to relate to. But thanks to the detailed exploration and inputs from domain experts, we were able to step into the shoes of real users and see the impact of even the smallest pain points. While some teams were already writing code, we held back and spent time refining our direction."
+      },
+      {
+        "type": "image",
+        "content": "https://source.unsplash.com/random/800x600?teamwork"
+      },
+      {
+        "type": "text",
+        "content": "However, as we crossed the 38-hour mark, I began to panic. We hadn’t started development yet, and I felt we were running out of time. I pushed my team to speed things up. But in contrast, Solaimuthu, one of my teammates, stayed calm and simply said, “Pathukalam da.” That moment stuck with me. His composure under pressure reminded me that clarity is more valuable than rushing."
+      },
+      {
+        "type": "text",
+        "content": "In the final 10 hours, he brought forward an idea that became the turning point for our implementation. That spark helped us transition into the Design Development and Solution Development phases with renewed energy. We defined key features, structured the flow, and then dove into development—focusing on functionality first over visuals. We worked in sync, balancing between building the product and preparing the final presentation."
+      },
+      {
+        "type": "text",
+        "content": "Though sleep-deprived and exhausted, we managed to deploy a working prototype by the end. Our pitch wasn't just about features; it was a narrative of how we arrived at our solution. Each of us played a role in telling our journey, which helped us make a stronger connection with the jury. However, I wasn’t fully satisfied with the way I presented in front of the jury—I felt I could’ve communicated our efforts and vision more confidently. It’s something I’ve made a mental note to improve on for future opportunities."
+      },
+      {
+        "type": "text",
+        "content": "Looking back, this hackathon taught me more than I expected. I became aware of my own gaps—my tendency to rush, my fear of being judged, and moments of self-doubt. But it also gave me lessons on patience, teamwork, and the importance of asking the right questions before jumping to answers."
+      },
+      {
+        "type": "text",
+        "content": "What I walked away with wasn’t just a prototype—it was a shift in mindset. I now see problems differently, value user perspective more, and feel more confident in embracing the process over the outcome."
+      }
+    ]
+  }
+]

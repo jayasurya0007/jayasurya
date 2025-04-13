@@ -1,4 +1,5 @@
 import { Blog } from '../App';
+import '../styles/blogpost.css';
 
 type Props = {
   blog: Blog;
@@ -6,35 +7,35 @@ type Props = {
 
 const BlogPost = ({ blog }: Props) => {
   return (
-    <div className="pt-24 px-4 min-h-screen bg-gray-50">
-      <article className="max-w-3xl mx-auto prose prose-lg">
-        <header className="mb-12">
-          <h1 className="text-5xl font-bold text-gray-800 mb-4">{blog.title}</h1>
-          <div className="flex items-center text-gray-500 space-x-4">
-            <span>📅 {blog.date.toLocaleDateString('en-US', { dateStyle: 'long' })}</span>
+    <main className="blog-post">
+      <div className="container">
+        <header className="post-header">
+          <h1 className="post-title">{blog.title}</h1>
+          <div className="post-date">
+            📅 {blog.date.toLocaleDateString('en-US', { dateStyle: 'long' })}
           </div>
         </header>
 
         {blog.content.map((block, index) => (
           block.type === 'text' ? (
-            <p key={index} className="mb-6 text-gray-700 leading-relaxed">
+            <p key={index} className="text-content">
               {block.content}
             </p>
           ) : (
-            <figure key={index} className="my-12">
+            <figure key={index} className="content-block">
               <img
                 src={block.content}
                 alt="Blog content"
-                className="rounded-xl shadow-lg w-full object-cover"
+                className="post-image"
               />
-              <figcaption className="text-center text-sm text-gray-500 mt-2">
+              <figcaption className="image-caption">
                 Image description
               </figcaption>
             </figure>
           )
         ))}
-      </article>
-    </div>
+      </div>
+    </main>
   );
 };
 
