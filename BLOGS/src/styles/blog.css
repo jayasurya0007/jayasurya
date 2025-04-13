@@ -1,0 +1,89 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .nav-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  /* Dashboard */
+  .dashboard {
+    padding: 2rem;
+  }
+  
+  .blog-card {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .blog-title a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+  
+  .blog-date {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  /* Blog Content */
+  .blog-content {
+    padding: 2rem;
+  }
+  
+  .blog-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+  
+  /* Profitable Page */
+  .profitable-page {
+    padding: 2rem;
+  }
+  
+  .profitable-page h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profitable-page p {
+    line-height: 1.6;
+  }
+  
