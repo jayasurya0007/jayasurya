@@ -12,7 +12,8 @@ const BlogPost = ({ blog }: Props) => {
         <header className="post-header">
           <h1 className="post-title">{blog.title}</h1>
           <div className="post-date">
-            📅 {blog.date.toLocaleDateString('en-US', { dateStyle: 'long' })}
+            📅 {blog.startDate.toLocaleDateString('en-US', { dateStyle: 'long' })}- 
+            {blog.endDate.toLocaleDateString('en-US', { dateStyle: 'long' })}
           </div>
         </header>
 
@@ -28,9 +29,9 @@ const BlogPost = ({ blog }: Props) => {
                 alt="Blog content"
                 className="post-image"
               />
-              <figcaption className="image-caption">
+              {/* <figcaption className="image-caption">
                 {block.desc}
-              </figcaption>
+              </figcaption> */}
             </figure>
           )
         ))}

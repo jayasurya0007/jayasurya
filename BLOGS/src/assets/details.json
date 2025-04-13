@@ -1,8 +1,9 @@
 [
   {
-    "id": "3",
+    "id": "1",
     "title": "Design Spark Challenge: A Journey Beyond Code",
-    "date": "2024-03-25",
+    "startDate": "2025-03-07",
+    "endDate": "2025-03-09",
     "excerpt": "Reflections on a 48-hour hackathon that reshaped how I approach problems...",
     "featuredImage": "/assets/blog1_f.jpg",
     "content": [

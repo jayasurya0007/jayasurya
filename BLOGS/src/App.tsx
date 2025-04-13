@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import BlogPost from './components/BlogPost';
-import Details from "../public/assets/details.json";
+import Details from "./assets/details.json";
 
 export type ContentBlock = {
   type: 'text' | 'image';
@@ -13,7 +13,8 @@ export type ContentBlock = {
 export type Blog = {
   id: string;
   title: string;
-  date: Date;
+  startDate: Date;
+  endDate:Date;
   excerpt: string;
   featuredImage?: string;
   content: ContentBlock[];
@@ -23,7 +24,8 @@ const App = () => {
   const [blogs] = useState<Blog[]>(
     Details.map(blog => ({
       ...blog,
-      date: new Date(blog.date),
+      startDate: new Date(blog.startDate),
+      endDate: new Date(blog.endDate),
       content: blog.content.map(c => ({
         ...c,
         type: c.type as 'text' | 'image', // 🔑 Assert the type

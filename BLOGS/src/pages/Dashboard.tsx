@@ -13,7 +13,7 @@ const Dashboard = ({ blogs }: Props) => {
         <h1 className="page-title">Latest Stories</h1>
         <div className="blog-list">
           {blogs
-            .sort((a, b) => b.date.getTime() - a.date.getTime())
+            .sort((a, b) => b.startDate.getTime() - a.startDate.getTime())
             .map((blog) => (
               <BlogCard key={blog.id} blog={blog} />
             ))}

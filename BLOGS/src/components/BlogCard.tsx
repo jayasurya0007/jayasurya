@@ -15,7 +15,8 @@ const BlogCard = ({ blog }: Props) => {
       <div className="card-content">
         <div className="post-date">
           <span>📅</span>
-          {blog.date.toLocaleDateString('en-US', { dateStyle: 'long' })}
+          {blog.startDate.toLocaleDateString('en-US', { dateStyle: 'long' })}-
+          {blog.endDate.toLocaleDateString('en-US', { dateStyle: 'long' })}
         </div>
         <Link to={`/blog/${blog.id}`} className="post-title">
           {blog.title}
