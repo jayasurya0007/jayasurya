@@ -29,7 +29,7 @@ const BlogPost = ({ blog }: Props) => {
                 className="post-image"
               />
               <figcaption className="image-caption">
-                Image description
+                {block.desc}
               </figcaption>
             </figure>
           )

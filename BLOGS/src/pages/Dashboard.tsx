@@ -1,6 +1,6 @@
 import { Blog } from '../App';
 import BlogCard from '../components/BlogCard';
-import '../styles/blogcard.css';
+import '../styles/dashboard.css';
 
 type Props = {
   blogs: Blog[];

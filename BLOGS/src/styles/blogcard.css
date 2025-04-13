@@ -1,65 +1,80 @@
 .blog-card {
     background: white;
-    border-radius: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     margin-bottom: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .blog-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .featured-image {
-    height: 300px;
-    background-color: #e5e7eb;
-    overflow: hidden;
-  }
-  
-  .featured-image img,
-  .post-image {
-    width: 100%;              /* Make image width fill the container */
-    height: 400px;            /* Set a fixed height (adjust to your need) */
-    object-fit: contain;      /* Fit the image inside, no cropping, maintain aspect ratio */
-    border-radius: 8px;       /* Optional, to round the corners */
-    display: block;           /* Removes extra space below the image */
-  }
-  
-  .blog-card:hover .featured-image img {
-    transform: scale(1.05);
-  }
-  
-  .card-content {
-    padding: 2rem;
-  }
-  
-  .post-date {
-    color: #6b7280;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.featured-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #eee;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.post-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .post-title {
-    color: #1f2937;
+}
+
+.post-title {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #333;
     text-decoration: none;
     display: block;
-  }
-  
-  .post-excerpt {
-    color: #4b5563;
+    margin: 1rem 0;
+    transition: color 0.3s ease;
+}
+
+.post-title:hover {
+    color: #007bff;
+}
+
+.post-excerpt {
+    color: #666;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
-  }
-  
-  .read-more {
-    color: #2563eb;
-    text-decoration: none;
+}
+
+.read-more {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-  }
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: gap 0.3s ease;
+}
+
+.read-more:hover {
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .featured-image img {
+        height: 200px;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .post-title {
+        font-size: 1.3rem;
+    }
+}
