@@ -7,12 +7,12 @@ const Navbar = () => {
         <a href="/" className="brand">MyBlog</a>
         <div className="nav-links">
           <a
-            href="https://jayasuryar.xyz."
+            href="https://jayasuryar.xyz/#contact"
             className="nav-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Portfolio
+            Get Connected
           </a>
         </div>
       </div>
