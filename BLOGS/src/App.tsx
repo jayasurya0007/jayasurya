@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
-import Dashboard from './pages/Dashboard'; // ✅ Correct casing
+import Dashboard from './pages/Dashboard';
 import BlogPost from './components/BlogPost';
-import Details from "./assets/Details.json";
+import Details from "../public/assets/details.json";
 
 export type ContentBlock = {
   type: 'text' | 'image';

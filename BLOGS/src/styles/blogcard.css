@@ -18,11 +18,13 @@
     overflow: hidden;
   }
   
-  .featured-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  .featured-image img,
+  .post-image {
+    width: 100%;              /* Make image width fill the container */
+    height: 400px;            /* Set a fixed height (adjust to your need) */
+    object-fit: contain;      /* Fit the image inside, no cropping, maintain aspect ratio */
+    border-radius: 8px;       /* Optional, to round the corners */
+    display: block;           /* Removes extra space below the image */
   }
   
   .blog-card:hover .featured-image img {
