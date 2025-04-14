@@ -1,0 +1,11 @@
+.footer {
+    background: linear-gradient(135deg,#55596b 0%,#424b71 100%); /* Tailwind's gray-900 */
+    color: #9ca3af;            /* Tailwind's gray-400 */
+    text-align: center;
+    font-size: 0.875rem;       /* 14px */
+    padding: 1rem;             /* 16px */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+  

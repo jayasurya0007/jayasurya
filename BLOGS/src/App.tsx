@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import BlogPost from './components/BlogPost';
 import Details from "./assets/details.json";
+import Footer from './components/Footer';
 
 export type ContentBlock = {
   type: 'text' | 'image';
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="/" element={<Dashboard blogs={blogs} />} />
         <Route path="/blog/:id" element={<BlogPostWrapper blogs={blogs} />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
