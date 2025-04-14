@@ -48,6 +48,13 @@
     font-size: 0.9rem;
     margin-top: 0.5rem;
 }
+.author-info {
+    text-align: right;
+    font-style: italic;
+    margin-top: 3rem;
+    color: #444;
+    font-size: 1rem;
+  }
 
 @media (max-width: 768px) {
     .post-title {

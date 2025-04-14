@@ -9,6 +9,11 @@ export type ContentBlock = {
   type: 'text' | 'image';
   content: string;
 };
+export type Author = {
+  name: string;
+  designation: string;
+};
+
 
 export type Blog = {
   id: string;
@@ -18,6 +23,7 @@ export type Blog = {
   excerpt: string;
   featuredImage?: string;
   content: ContentBlock[];
+  author:Author;
 };
 
 const App = () => {

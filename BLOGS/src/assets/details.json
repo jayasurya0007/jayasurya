@@ -5,7 +5,7 @@
     "startDate": "2025-03-07",
     "endDate": "2025-03-09",
     "excerpt": "Reflections on a 48-hour hackathon that reshaped how I approach problems...",
-    "featuredImage": "/assets/blog1_f.jpg",
+    "featuredImage": "/assets/blog1/blog1_f.jpg",
     "content": [
       {
         "type": "text",
@@ -17,7 +17,7 @@
       },
       {
         "type": "image",
-        "content": "/assets/blog1_1.jpg"
+        "content": "/assets/blog1/blog1_1.jpg"
       },
       {
         "type": "text",
@@ -33,7 +33,7 @@
       },
       {
         "type": "image",
-        "content": "/assets/blog1_2.jpg"
+        "content": "/assets/blog1/blog1_2.jpg"
       },
       {
         "type": "text",
@@ -55,6 +55,10 @@
         "type": "text",
         "content": "What I walked away with wasn’t just a prototype—it was a shift in mindset. I now see problems differently, value user perspective more, and feel more confident in embracing the process over the outcome."
       }
-    ]
+    ],
+  "author": {
+    "name": "Jayasurya R",
+    "designation": "Pre-Final Year Student | Full-Stack Developer"
+  }
   }
 ]
