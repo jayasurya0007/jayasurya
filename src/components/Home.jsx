@@ -10,7 +10,7 @@ const Home = () => {
         I design experiences, not just websites.</p>
         <div className="home-buttons">
           <a 
-            href="https://drive.google.com/uc?export=download&id=1b3FbXPbH5MDqEOWbnJDEs9W_dF8iw5J-" 
+            href="https://drive.google.com/file/d/1EF4voxSZyN6dRvYbolYuy01KPkNyJ4q0/view?usp=sharing" 
             className="btn primary"
             download="Jayasuriya_CV.pdf"
             target="_blank"
