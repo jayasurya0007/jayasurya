@@ -112,7 +112,7 @@ const Navbar = ({
               </a>
             </li>
           ))}
-          <li>
+          {/* <li>
             <a 
               href="https://blogs.jayasuryar.xyz" 
               target="_blank" 
@@ -120,7 +120,7 @@ const Navbar = ({
             >
               Blogs
             </a>
-          </li>
+          </li> */}
         </ul>
 
     </nav>
