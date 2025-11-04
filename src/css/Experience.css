@@ -1,140 +1,111 @@
-/* Experience.css */
 .experience-container {
-    padding: 100px 5%;
-    background-color: var(--cosmic-dark);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .experience-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="1" fill="%2300f3ff" opacity="0.5"/></svg>');
-    animation: stars 60s linear infinite;
-    z-index: 0;
-  }
-  
-  .experience-timeline {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .experience-timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      var(--starlight) 30%,
-      var(--starlight) 70%,
-      transparent 100%
-    );
-  }
-  
-  .experience-card {
-    position: relative;
-    margin-bottom: 50px;
-    padding: 30px;
-    background: rgba(0, 243, 255, 0.05);
-    border: 1px solid rgba(0, 243, 255, 0.1);
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    transition: var(--transition);
-  }
-  
-  .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
-    border-color: var(--starlight);
-  }
-  
-  .experience-header {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(0, 243, 255, 0.2);
-  }
-  
-  .experience-header h3 {
-    color: var(--starlight);
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 10px;
+  padding: 5rem 2rem;
+}
+
+.experience-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-3px);
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #000;
+}
+
+.experience-header h3 {
+  font-family: 'Playfair Display', serif;
+  color: #000;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.company-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-name {
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.duration {
+  font-family: 'JetBrains Mono', monospace;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.experience-description {
+  color: #000;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.responsibilities h4 {
+  color: #000;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.responsibilities ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.responsibilities li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.responsibilities li::before {
+  content: '•';
+  position: absolute;
+  left: -1.5rem;
+  color: #000;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 3rem 1rem;
   }
   
   .company-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.4rem;
   }
   
   .company-name {
-    color: var(--space-gray);
-    font-family: 'Audiowide', cursive;
     font-size: 1.1rem;
   }
-  
-  .duration {
-    color: var(--starlight);
-    font-size: 0.9rem;
-  }
-  
-  .experience-description {
-    color: var(--space-gray);
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
-  .responsibilities h4 {
-    color: var(--starlight);
-    font-family: 'Audiowide', cursive;
-    margin-bottom: 15px;
-  }
-  
-  .responsibilities ul {
-    list-style: none;
-    padding-left: 20px;
-  }
-  
-  .responsibilities li {
-    position: relative;
-    margin-bottom: 10px;
-    color: var(--space-gray);
-  }
-  
-  .responsibilities li::before {
-    content: '▹';
-    position: absolute;
-    left: -20px;
-    color: var(--starlight);
-  }
-  
-  @media (max-width: 768px) {
-    .experience-timeline::before {
-      left: 20px;
-    }
-    .experience-container{
-      padding: auto;
-    }
-    .experience-card {
-      margin-left: 35px;
-    }
-    
-    .company-info {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    
-    .responsibilities li::before {
-      left: -15px;
-    }
-  }
+}
